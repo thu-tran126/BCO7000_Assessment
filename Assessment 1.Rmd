@@ -1,0 +1,36 @@
+---
+title: "Assessment 1.1"
+author: "Thu Tran_s4625014"
+date: "5/15/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+RMarkdown Editing 
+
+RMarkdown is an **authoring framework for data science**. 
+
+It *connects to data, runs code and generates high quality reports visualizing data to audiences*. 
+
+[Markdown Basics](https://rmarkdown.rstudio.com/lesson-8.html)
+
+```{r}
+library(tidyverse)
+
+fastfood<-read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv")
+head(fastfood,10)
+
+fastfood%>%filter(calories>1000)
+
+dont_eat_this<-fastfood%>%filter(total_fat>40 & total_carb>80)
+
+fastfood%>%filter(restaurant=="Mcdonalds")
+
+```
+
+
+
+
